@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Твой Блокнот</title>
   <style>
-    /* Анимация плавного изменения фона */
+    /* Анимация плавного изменения фона с красного на светло-розовый */
     @keyframes backgroundColorChange {
       0% { background-color: #ff0000; }
       50% { background-color: #ffb6c1; }
@@ -62,24 +62,41 @@
 </head>
 <body>
   <div class="container">
+    <!-- Блок приветствия -->
     <h1>Привет! Этот сайт создан специально для тебя.</h1>
     <p>Наслаждайся текстом)</p>
-
     <p>Я не профессиональный программист, но что-то сделать-то могу. Итак, для чего я создал сайт? Я сам не знаю. Мне просто скучно.</p>
 
-    <!-- Кнопка "салам" -->
+    <!-- Блок кнопок с тролль-текстами -->
     <button onclick="showText('trollText')">салам</button>
     <p id="trollText" class="hidden">На колени! На колени!</p>
 
     <button onclick="showText('pisunText')">Увидеть писюн</button>
     <p id="pisunText" class="hidden">Куда мы лезем?)))</p>
 
-    <p>Тебе понравился сайт?</p>
-    <button onclick="showText('yesText')">Да</button>
-    <button onclick="showText('noText')">Нет</button>
+    <!-- Кнопка "шутка" -->
+    <button onclick="showText('jokeText')">шутка</button>
+    <p id="jokeText" class="hidden">
+      На днях моя девушка попросила меня передать ей помаду, но я случайно передал ей клей-карандаш. Она до сих пор со мной не разговаривает. <a href="#" style="color:#fff; text-decoration:underline;">Читать больше</a>
+    </p>
 
-    <p id="yesText" class="hidden">Вот ты молодец!</p>
-    <p id="noText" class="hidden">Тебя никто не спрашивал, соси!</p>
+    <!-- Кнопка "Геопозиция" -->
+    <button onclick="showText('geoText')">Геопозиция</button>
+    <p id="geoText" class="hidden">А тебя это ебать не должно</p>
+
+    <!-- Блок оценки сайта -->
+    <p>Тебе понравился сайт?</p>
+    <button onclick="showText('siteYesText')">Да</button>
+    <button onclick="showText('siteNoText')">Нет</button>
+    <p id="siteYesText" class="hidden">Вот ты молодец!</p>
+    <p id="siteNoText" class="hidden">Тебя никто не спрашивал, соси!</p>
+
+    <!-- Блок про гайд -->
+    <p>Нужен ли гайд как я это все сделал? И нужен ли совет как делать все легко</p>
+    <button onclick="showText('guideYes')">Да</button>
+    <button onclick="showText('guideNo')">Нет</button>
+    <p id="guideYes" class="hidden">С вас 1000000000000 рублей</p>
+    <p id="guideNo" class="hidden">Ну и ваши к своим мажорам</p>
   </div>
 
   <script>
